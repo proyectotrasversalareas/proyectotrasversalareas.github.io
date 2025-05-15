@@ -1,0 +1,64 @@
+<html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #a3d9a5;
+  margin-bottom: 40px;
+}
+
+#img {
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+video {
+  margin-top: 40px;
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h1>Proyecto Transversal: Embellecimiento de Áreas Verdes</h1>
+
+<h2>Selecciona una imagen:</h2>
+<form>
+  <select id="imagen" onchange="ver_imagen()">
+    <option value="pt1.jfif">Imagen 1</option>
+    <option value="pt2.jfif">Imagen 2</option>
+    <option value="pt3.jfif">Imagen 3</option>
+  </select>
+</form>
+<br>
+<img id="img" src="pt1.jfif" width="600" height="436">
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+function ver_imagen() {
+  var select = document.getElementById("imagen");
+  var img = document.getElementById("img");
+  img.src = select.value;
+}
+</script>
+
+</body>
+</html>
